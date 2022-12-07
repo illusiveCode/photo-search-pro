@@ -49,3 +49,18 @@ h1 {
 h3 a {
     text-decoration-color: white;
 }
+
+button {
+    height: 30px;
+    width: 100px;
+    background-color: Transparent;
+    color: white;
+    border-color: var(--base-color);
+    text-transform: uppercase;
+}
+
+button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--base-color);
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}

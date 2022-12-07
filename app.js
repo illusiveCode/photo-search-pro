@@ -1,8 +1,9 @@
-window.onload = function searchPhotos() {
-  const clientId = "frW4i384SKivDaHyJPtcuuwDpH-hLSxwQDmK1bnKTjk";
-  const query = document.querySelector("#search");
-  const baseURL = `https://api.unsplash.com/photos/random/?client_id=${clientId}&query=${query}`;
+const clientId = "frW4i384SKivDaHyJPtcuuwDpH-hLSxwQDmK1bnKTjk";
+const query = document.querySelector("#search");
+const baseURL = `https://api.unsplash.com/photos/random/?client_id=${clientId}&query=${query}`;
+let img = document.createElement("img");
 
+function searchPhotos() {
   // Request to the API using Fetch
 
   fetch(baseURL)
@@ -10,9 +11,9 @@ window.onload = function searchPhotos() {
       return data.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       //getting all the tags from the html
-      let img = document.createElement("img");
+
       let link = document.getElementById("photos");
       let span = document.getElementById("username");
       let userLink = document.getElementById("userLink");
@@ -28,7 +29,6 @@ window.onload = function searchPhotos() {
     })
     .catch((error) => {
       console.error("Error:", error);
-      // let container = document.querySelector(".container");
       let errorMessage = document.createElement("h2");
       let h3 = document.getElementById("user");
 
@@ -37,4 +37,4 @@ window.onload = function searchPhotos() {
       document.querySelector("h2").innerText =
         "No images to show, check back later on.";
     });
-};
+}
