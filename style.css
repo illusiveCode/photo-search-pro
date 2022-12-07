@@ -1,0 +1,51 @@
+:root {
+    --base-color: yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 47, 121, 1) 17%, rgba(0, 212, 255, 1) 100%);
+}
+
+img {
+    margin: 5px;
+    transform: rotate(5deg);
+    border: 5px solid yellow;
+}
+
+body #photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 100vh; */
+}
+
+h3,
+h2 {
+    color: white;
+
+}
+
+h3 a span,
+h1 {
+    color: var(--base-color);
+
+
+}
+
+h3 a {
+    text-decoration-color: white;
+}
